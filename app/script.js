@@ -10,31 +10,24 @@ new Vue({
       isTimerPlaying: false,
       tracks: [
         {
-          name: "Nyan Cat",
-          artist: "Hatsune Mico",
-          cover: "covers/nyan-cat.png",
-          source: "mp3/nyan-cat.mp3",
-          favorited: false
-        },
-        {
           name: "Minecraft - Key",
           artist: "C418",
-          cover: "covers/minecraft.jpeg",
-          source: "mp3/minecraft-key.mp3",
+          cover: "app/covers/minecraft.jpeg",
+          source: "app/mp3/minecraft-key.mp3",
           favorited: false
         },
         {
           name: "Minecraft - Cat",
           artist: "C418",
-          cover: "covers/discs.jpeg",
-          source: "mp3/minecraft-cat.mp3",
+          cover: "app/covers/discs.jpeg",
+          source: "app/mp3/minecraft-cat.mp3",
           favorited: false
         },
         {
           name: "Minecraft - Dog",
           artist: "C418",
-          cover: "covers/minecraft.jpeg",
-          source: "mp3/minecraft-dog.mp3",
+          cover: "app/covers/minecraft.jpeg",
+          source: "app/mp3/minecraft-dog.mp3",
           favorited: false
         },
         {
@@ -47,155 +40,155 @@ new Vue({
         {
           name: "Minecraft - Subwoofer Lullaby",
           artist: "C418",
-          cover: "covers/minecraft.jpeg",
-          source: "mp3/minecraft-subwoofer-lullaby.mp3",
+          cover: "app/covers/minecraft.jpeg",
+          source: "app/mp3/minecraft-subwoofer-lullaby.mp3",
           favorited: false
         },
         {
           name: "Minecraft - Ballad of the Cats",
           artist: "C418",
-          cover: "covers/minecraft.jpeg",
-          source: "mp3/minecraft-ballad-of-the-cats.mp3",
+          cover: "app/covers/minecraft.jpeg",
+          source: "app/mp3/minecraft-ballad-of-the-cats.mp3",
           favorited: false
         },
         {
           name: "Minecraft - Living Mice",
           artist: "C418",
-          cover: "covers/minecraft.jpeg",
-          source: "mp3/minecraft-living-mice.mp3",
+          cover: "app/covers/minecraft.jpeg",
+          source: "app/mp3/minecraft-living-mice.mp3",
           favorited: false
         },
         {
           name: "Minecraft - Taswell",
           artist: "C418",
-          cover: "covers/minecraft.jpeg",
-          source: "mp3/minecraft-taswell.mp3",
+          cover: "app/covers/minecraft.jpeg",
+          source: "app/mp3/minecraft-taswell.mp3",
           favorited: false
         },
         {
           name: "Minecraft - Moog City",
           artist: "C418",
-          cover: "covers/minecraft.jpeg",
-          source: "mp3/minecraft-moog-city.mp3",
+          cover: "app/covers/minecraft.jpeg",
+          source: "app/mp3/minecraft-moog-city.mp3",
           favorited: false
         },
         {
           name: "Minecraft - Haggstrom",
           artist: "C418",
-          cover: "covers/minecraft.jpeg",
-          source: "mp3/minecraft-haggstrom.mp3",
+          cover: "app/covers/minecraft.jpeg",
+          source: "app/mp3/minecraft-haggstrom.mp3",
           favorited: false
         },
         {
           name: "Minecraft - Beginning",
           artist: "C418",
-          cover: "covers/minecraft.jpeg",
-          source: "mp3/minecraft-beginning.mp3",
+          cover: "app/covers/minecraft.jpeg",
+          source: "app/mp3/minecraft-beginning.mp3",
           favorited: false
         },
         {
           name: "Minecraft - Minecraft",
           artist: "C418",
-          cover: "covers/minecraft.jpeg",
-          source: "mp3/minecraft-minecraft.mp3",
+          cover: "app/covers/minecraft.jpeg",
+          source: "app/mp3/minecraft-minecraft.mp3",
           favorited: false
         },
         {
           name: "Minecraft - Mice on Venus",
           artist: "C418",
-          cover: "covers/minecraft.jpeg",
-          source: "mp3/minecraft-mice-on-venus.mp3",
+          cover: "app/covers/minecraft.jpeg",
+          source: "app/mp3/minecraft-mice-on-venus.mp3",
           favorited: false
         },
         {
           name: "Minecraft - Dry Hands",
           artist: "C418",
-          cover: "covers/minecraft.jpeg",
-          source: "mp3/minecraft-dry-hands.mp3",
+          cover: "app/covers/minecraft.jpeg",
+          source: "app/mp3/minecraft-dry-hands.mp3",
           favorited: false
         },
         {
           name: "Minecraft - Wet Hands",
           artist: "C418",
-          cover: "covers/minecraft.jpeg",
-          source: "mp3/minecraft-wet-hands.mp3",
+          cover: "app/covers/minecraft.jpeg",
+          source: "app/mp3/minecraft-wet-hands.mp3",
           favorited: false
         },
         {
           name: "Minecraft - Beginning 2",
           artist: "C418",
-          cover: "covers/minecraft.jpeg",
-          source: "mp3/minecraft-beginning-2.mp3",
+          cover: "app/covers/minecraft.jpeg",
+          source: "app/mp3/minecraft-beginning-2.mp3",
           favorited: false
         },
         {
           name: "Minecraft - Clark",
           artist: "C418",
-          cover: "covers/minecraft.jpeg",
-          source: "mp3/minecraft-clark.mp3",
+          cover: "app/covers/minecraft.jpeg",
+          source: "app/mp3/minecraft-clark.mp3",
           favorited: false
         },
         {
           name: "Minecraft - Sweden",
           artist: "C418",
-          cover: "covers/minecraft.jpeg",
-          source: "mp3/minecraft-sweden.mp3",
+          cover: "app/covers/minecraft.jpeg",
+          source: "app/mp3/minecraft-sweden.mp3",
           favorited: false
         },
         {
           name: "Minecraft - Moog City 2",
           artist: "C418",
-          cover: "covers/minecraft.jpeg",
-          source: "mp3/minecraft-moog-city-2.mp3",
+          cover: "app/covers/minecraft.jpeg",
+          source: "app/mp3/minecraft-moog-city-2.mp3",
           favorited: false
         },
         {
           name: "Minecraft - Aria Math",
           artist: "C418",
-          cover: "covers/minecraft.jpeg",
-          source: "mp3/minecraft-aria-math.mp3",
+          cover: "app/covers/minecraft.jpeg",
+          source: "app/mp3/minecraft-aria-math.mp3",
           favorited: false
         },
         {
           name: "Minecraft - Dreiton",
           artist: "C418",
-          cover: "covers/minecraft.jpeg",
-          source: "mp3/minecraft-dreiton.mp3",
+          cover: "app/covers/minecraft.jpeg",
+          source: "app/mp3/minecraft-dreiton.mp3",
           favorited: false
         },
         {
           name: "Minecraft - Blocks",
           artist: "C418",
-          cover: "covers/discs.jpeg",
-          source: "mp3/minecraft-blocks.mp3",
+          cover: "app/covers/discs.jpeg",
+          source: "app/mp3/minecraft-blocks.mp3",
           favorited: false
         },
         {
           name: "Minecraft - Floating Trees",
           artist: "C418",
-          cover: "covers/minecraft.jpeg",
-          source: "mp3/minecraft-floating-trees.mp3",
+          cover: "app/covers/minecraft.jpeg",
+          source: "app/mp3/minecraft-floating-trees.mp3",
           favorited: false
         },
         {
           name: "Minecraft - The End",
           artist: "C418",
-          cover: "covers/minecraft.jpeg",
-          source: "mp3/minecraft-the-end.mp3",
+          cover: "app/covers/minecraft.jpeg",
+          source: "app/mp3/minecraft-the-end.mp3",
           favorited: false
         },
         {
           name: "GremCube - О великий суп наварили",
           artist: "GremCube",
-          cover: "covers/xiokamusic.jpg",
-          source: "mp3/poslyshalos--velikiy-sup-navarili.mp3",
+          cover: "app/covers/xiokamusic.jpg",
+          source: "app/mp3/poslyshalos--velikiy-sup-navarili.mp3",
           favorited: false
         },
         {
           name: "SHEPH - Потолок",
           artist: "SHEPH",
-          cover: "covers/xiokamusic.jpg",
-          source: "mp3/videoplayback_online-audio-converter.com.mp3",
+          cover: "app/covers/xiokamusic.jpg",
+          source: "app/mp3/videoplayback_online-audio-converter.com.mp3",
           favorited: false
         }
       ],
