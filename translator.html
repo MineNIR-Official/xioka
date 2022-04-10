@@ -59,7 +59,6 @@
 				<button class="go">
 					<i class="fa fa-angle-right"></i>
 				</button>
-        <button id='button' onClick='changeTheme()'>Тёмный режим</button>
 			</plt>
 			
 			<div class="redo">
@@ -81,26 +80,6 @@
 	text-align:center ;
 	
 	
-}
-button{
-  font-family: Quicksand, sans-seris;
-  
-}
-#button{
-  margin-top: 10px;
-  background: dodgerblue;
-  color: white;
-  width: 80%;
-  height: 60px;
-  font-size: 20px;
-  outline: none;
-  border: 5px solid deepskyblue;
-  border-radius: 5px;
-}
-#body{
-  background: white;
-  color: #555;
-  text-align: center;
 }
 select {
 	outline:none ;
@@ -223,18 +202,7 @@ h1 {
 }) ;
 
 
-function changeTheme(){
-  if(document.getElementById('button').interHTML==='Тёмный режим'){
-    document.body.style.background='#555';
-    document.body.style.color='white';
-    document.getElementById('button').interHTML==='Светлый режим';
-  }  
-  else{
-    document.body.style.background='white';
-    document.body.style.color='#555';
-    document.getElementById('button').interHTML==='Тёмный режим';
-  }
-}
+
 
 
 
