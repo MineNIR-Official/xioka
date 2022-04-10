@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Translator - Xioka</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Russo+One|Raleway|Lobster|Roboto|Nunito" rel="stylesheet"> 
+	</head>
+	<body>
+		<div class="page">
+			<br />
+			<br />
+			<span class="pr">От <txt>EN</txt></span>
+			<span class="pl">к <txt>FR</txt></span>
+			
+			<br />
+			<br />
+			<div class="int">
+				<select class="a">
+					<option value="auto">detect language</option>
+					<option value="en" selected>english</option>
+					<option value="fr">français</option>
+					<option value="de">deutsch</option>
+					<option value="zh-cn">中国</option>
+					<option value="ko">한국의</option>
+					<option value="ar">العربية</option>
+					<option value="es">español</option>
+					<option value="it">italiano</option>
+					<option value="pt">português</option>
+					<option value="ru">русский</option>
+					<option value="ja">日本の</option>
+					<option value="fa">فارسی</option>
+					<option value="hi">हिन्दी</option>
+				</select>
+				<select class="b">
+					<option value="en">english</option>
+					<option value="fr" selected>français</option>
+					<option value="de">deutsch</option>
+					<option value="zh-cn">中国</option>
+					<option value="ko">한국의</option>
+					<option value="ar">العربية</option>
+					<option value="es">español</option>
+					<option value="it">italiano</option>
+					<option value="pt">português
+
+</option>
+					<option value="ru">русский</option>
+					<option value="ja">日本の</option>
+					<option value="fa">فارسی</option>
+					<option value="hi">हिन्दी</option>
+				</select>
+			</div>
+			<br />
+
+    
+  
+			<plt>
+				<input class="enter" value="hello" placeholder="Привет Мир!"> 
+				<button class="go">
+					<i class="fa fa-angle-right"></i>
+				</button>
+        <button id='button' onClick='changeTheme()'>Тёмный режим</button>
+			</plt>
+			
+			<div class="redo">
+				<txt>
+					<pl>hello</pl> , переведено: 
+				</txt>
+				<h1>Bonjour</h1>
+			</div>
+		</div>
+		<style>
+		  body {
+	margin:0 ;
+}
+.page {
+	height:100vh ;
+	padding:2vw ;
+	width:96vw ;
+	font-family:'Raleway' , serif ;
+	text-align:center ;
+	
+	
+}
+button{
+  font-family: Quicksand, sans-seris;
+  
+}
+#button{
+  margin-top: 10px;
+  background: dodgerblue;
+  color: white;
+  width: 80%;
+  height: 60px;
+  font-size: 20px;
+  outline: none;
+  border: 5px solid deepskyblue;
+  border-radius: 5px;
+}
+body{
+  background: white;
+  color: #555;
+  text-align: center;
+}
+select {
+	outline:none ;
+	padding:10px 6px ;
+	width:128px ;
+	font-size:16px ;
+	font-family:'Raleway' , serif ;
+	font-weight:bolder ;
+	background:rgba(200,200,200,0.4) ;
+	text-align:center ;
+	text-align:center ;
+	background:white ;
+	border:1px solid #1FB6ED ;
+	color:#1FB6ED ;
+	
+}
+.a {
+	border-radius:8px 0px 0px 0px ;
+	float:left ;
+	margin-left:5px ;
+}
+.b {
+	border-radius:0px 8px 0px 0px ;
+	float:right ;
+	margin-right:5px ;
+}
+.enter {
+	padding:3px 18px ;
+	height:24px ;
+	border:1px solid #1FB6ED ;
+	width:70% ;
+	outline:none ;
+	font-size:22px ;
+	font-family:'Raleway' , serif ;
+	display:inline-block ;
+	line-height:30px ;
+	margin:0px ;
+	border-radius:8px 0px 0px 8px ;
+	float:left ;
+	margin-left:5px ;
+	
+}
+.go {
+	height:32px ;
+	width:12% ;
+	border-radius:0px 8px 8px 0px ;
+	border:none ;
+	outline:none ;
+	background:rgba(200,200,200,0.4) ;
+	display:inline-block ;
+	margin:0px ;
+	background:#1FB6ED ;
+	color:white ;
+	cursor:pointer ;
+	float:right ;
+	font-size:25px ;
+	margin-right:5px ;
+	
+}
+plt {
+	display:inline-block ;
+	height:30px ;
+	width:280px ;
+	position:relative ;
+	margin-top:18px ;
+	
+}
+.int {
+	width:280px ;
+	position:relative ;
+	display:inline-block ;
+}
+.redo {
+	height:auto ;
+	width:98vw ;
+	overflow-y:scroll ;
+	overflow-x:hidden ;
+	border-radius:0px 0px 8px 8px ;
+	display:inline-block ;
+	margin-top:40px ;
+	
+}
+pl {
+	color:#1FB6ED ;
+}
+h1 {
+	font-size:50px ;
+	font-family:'Nunito' , sans-serif ;
+}
+.pr txt , .pl txt {
+	font-weight:bold ;
+	text-transform:uppercase ;
+}
+
+
+
+		</style>
+		
+		<script>
+		  $(document).ready(function () {
+	$('.go').click(function () {
+		var from = $('.a').val() ;
+		var to = $('.b').val() ;
+		var word = $('.enter').val() ;
+		word = word.replace(/ /g , '%20') ;
+		
+		$(function() {
+    		$.getJSON("https://translate.googleapis.com/translate_a/single?client=gtx&sl=" + from + "&tl=" + to + "&dt=t&dt=t&q=" + word ,
+      	  function(json) {
+				var js = String(json) ;
+				var rendu = js.split(',') ;
+				
+				$('.redo').html('<txt><pl>' + $('.enter').val() + '</pl> , translated : </txt><h1>' + rendu[0] + '</h1>') ;
+				$('.pr txt').text(from) ;
+				$('.pl txt').text(to) ;
+				
+      	  });
+		}) ;
+	}) ;
+}) ;
+
+
+function changeTheme(){
+  if(document.getElementById('button').interHTML==='Тёмный режим'){
+    document.body.style.background='#555';
+    document.body.style.color='white';
+    document.getElementById('button').interHTML==='Светлый режим';
+  }  
+  else{
+    document.body.style.background='white';
+    document.body.style.color='#555';
+    document.getElementById('button').interHTML==='Тёмный режим';
+  }
+}
+
+
+
+
+		</script>
+		
+		 <meta name="viewport" content="width=device-width">
+		
+	</body>
+</html>
+   
