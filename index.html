@@ -1,2560 +1,328 @@
 <!DOCTYPE html>
 <html>
   <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width">
-      <title>Xioka We</title>
-      <meta name="msapplication-TileColor" content="#ffff30" />
+    <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xioka We</title>
+     <meta name="msapplication-TileColor" content="#ffff30" />
       <meta name="theme-color" content="#ffff30" />
 
-    <meta name="twitter:image:src" content="https://media.discordapp.net/attachments/870268282547109894/961738454931218452/20220408_002509.jpg" /><meta name="twitter:site" content="@github" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content="Xioka We" /><meta name="twitter:description" content="Xioka We - Весёлая компания с удобным функцианалом! <br>Помоги развится нам, а мы поможем тебе функцианалом! <br>Воспользуйся уникалом Xioka We!" />
-    <meta property="og:image" content="https://media.discordapp.net/attachments/870268282547109894/961738454931218452/20220408_002509.jpg" /><meta property="og:image:alt" content="Xioka We - Весёлая компания с удобным функцианалом! <br>Помоги развится нам, а мы поможем тебе функцианалом! <br>Воспользуйся уникалом Xioka We!" /><meta property="og:site_name" content="Xioka We" /><meta property="og:type" content="object" /><meta property="og:title" content="Xioka We" /><meta property="og:url" content="https://main.xioka.repl.co/" /><meta property="og:description" content="Xioka We - Весёлая компания с удобным функцианалом! <br>Помоги развится нам, а мы поможем тебе функцианалом! <br>Воспользуйся уникалом Xioka We!" />
+    <meta name="twitter:image:src" content="https://media.discordapp.net/attachments/870268282547109894/962307523929583656/20220409_130527.png" /><meta name="twitter:site" content="@github" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content="Xioka We" /><meta name="twitter:description" content="Xioka We - Весёлая компания с удобным функцианалом! 
+Творим для будущего. 
+Простые решения для сложных проблем! Воспользуйся уникалом - Xioka We!" />
+    <meta property="og:image" content="https://media.discordapp.net/attachments/870268282547109894/962307523929583656/20220409_130527.png" /><meta property="og:image:alt" content="Xioka We - Весёлая компания с удобным функцианалом! 
+Творим для будущего. 
+Простые решения для сложных проблем! Воспользуйся уникалом - Xioka We!" /><meta property="og:site_name" content="Xioka We" /><meta property="og:type" content="object" /><meta property="og:title" content="Xioka We" /><meta property="og:url" content="https://main.xioka.repl.co/" /><meta property="og:description" content="Xioka We - Весёлая компания с удобным функцианалом! 
+Творим для будущего. 
+Простые решения для сложных проблем! Воспользуйся уникалом - Xioka We!" />
     
-      <link href="style.css" rel="stylesheet" type="text/css" />
-      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
-      <link rel="icon" href="https://media.discordapp.net/attachments/870268282547109894/960429235686739968/20220403_184505.png>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-      <script src="script.js"></script>
+    <link href="style.css" rel="stylesheet" type="text/css">
+		<link rel="icon" href="Images/favicon.png">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
-    <body>
-	  
-        <div class="container">
-	  
-		<!--────────────────Header───────────────-->
-	<header>
-		<a class="logo" href="#home">
-              <img src="https://media.discordapp.net/attachments/870268282547109894/960429235686739968/20220403_184505.png" alt="logo" />
-		</a>
-		<nav>	
-		 <ul class="nav-bar"><div class="bg"></div>
-			<li><a class="nav-link active" href="#home">Home</a></li>
-			<li><a class="nav-link" href="#projects">Projects</a></li>
-			<li><a class="nav-link" href="#contact">Contact</a></li>
-		 </ul>
-			
-			<div class="hamburger">
-				<div class="line1"></div>
-            <div class="line2"></div>
-				<div class="line3"></div>
+  <body>
+    <script src="script.js"></script>
+
+		<div id="navBar">
+			<div id="navBarItemContainer">
+				<ul id="navBarLeftItems">
+					<li class="navBarItem" id="navBarItemHome"><a href="#" class="navBarItemLink navBarActive">Главная</a></li>
+					<li class="navBarItem" id="navBarItemProduct"><a href="https://main.xioka.repl.co/random-color" class="navBarItemLink">Рандомный Цвет</a></li>
+					<li class="navBarItem" id="navBarItemAbout"><a href="https://music.xioka.repl.co/" class="navBarItemLink">Музыка</a></li>
+					<li class="navBarItem" id="navBarItemContact"><a href="#contact" class="navBarItemLink">Contact</a></li>
+				</ul>
+
+				<ul id="navBarRightItem">
+					<li class="navBarItem navBarRight"><a href="" class="navBarItemLinkRight">Xioka We</a></li>
+				</ul>
 			</div>
-		</nav>
-	</header>
-	<main>
-		<!--─────────────────Home────────────────-->
-	  <div id="home">
-		 <div class="filter"></div>
-		 <section class="intro">
-		  <h3>Xioka We<hr></h3>
-		  <p>Веселая компания</p>
-		  <p>Удобный функционал</p>
-          <p>Туц Туц</p>
-			  
-		  <!--────social media links─────-->
-			 
-		  <div class="social-media">
-			  <a href="Instagram Link" target="_blank"><i class='fab fa-instagram'></i></a>
-			  <a href="Twitter Link" target="_blank"><i class='fab fa-twitter'></i></a>
-        <a href="Discord" target="_blank"><i class='fab fa-discord'></i></a>
-			  <a href="https://youtube.com/channel/UC3bErmQ1Iv_HytgAatXvmBQ"  target="_blank"><i class="fab fa-youtube"></i></a>
-		    </div>
-			 
-		 </section> 
-	  </div>  
-		
-	  <!--───────────────Projects───────────────-->
-	  <div id="projects"> 
-		 <h3>My Discord Bots.<hr></h3>
-		  <p>Here are some of my discord bots, you may like.</p>
-		  <div class="work-box">
-		  <div class="work">
-		<!--───────────────card───────────────-->
-			<div class="card">
-			    <img class="work-img" src="bot1 logo">
-			    <a href="Bot1 Invite Link" target="_blank">
-				<div class="work-content">Bot1 Description</div></a>
-            </div>
-			<div class="card">
-			    <img class="work-img" src="Bot2 Logo">
-				<a href="Bot2 Invite Link" target="_blank"> <!--Link to project-->
-				<div class="work-content">Bot2 Description</div></a>
-            </div>
-            <div class="card">
-			    <img class="work-img" src="Bot3 Logo">
-				<a href="Bot3 Invite Link" target="_blank"> <!--Link to project-->
-				<div class="work-content">Bot3 Description</div></a>
-            </div>
-            <div class="card">
-			    <img class="work-img" src="Bot4 Logo"> <a href="Bot4 Invite Link" target="_blank"> <!--Link to project-->
-				<div class="work-content">Bot4 Description</div></a>
-            </div> 
-			<div class="card">
-			    <img class="work-img" src="Bot5 Invite Link" <a href="Bot5 Invite Link" target="_blank"> <!--Link to project-->
-				<div class="work-content">Bot5 Description</div></a>
-            </div>
-			<div class="card">
-			    <img class="work-img" src="Bot6 Logo">
-				<a href="Bot6 Invite Link" target="_blank"> <!--Link to project-->
-				<div class="work-content">Bot6 Description</div></a>
-            </div> 	  
-		  </div>
-		  </div>
-	  </div>
-		 
-		<!--──────────────Contact────────────────-->
-	  <div id="contact">
-		  <!--────social media links─────-->
-		   <h3>Contact.<hr></h3>
-		   <p>Feel free to contact me on my social media.</p>
-		    		  <div class="social-media">
-			  <a href="Twitter Link" target="_blank"><i class='fab fa-twitter'></i></a>
-			  <a href="YouTube Link" target="_blank"><i class="fab fa-youtube"></i></a>
-		    </div>
-		  </div>
+		</div> 
 
 
 
 
+		<section id="landingPage">
+			
+			<div id="landingPageImageTextContainer">
+				<img src="Images/landingPage.png" class="image" id="landingPageImage">
+				
+				<div id="landingPageText">
+					<h1 id="landingPageProductName">Xioka</h1>
 
+					<p>Творим для будущего<br>Простые решения для сложных проблем<br>Если есть идея</p>
 
+					<p>То свяжитесь с <a href="">нами</a></p>
 
+					<div id="landingPageButtonContainer">
+						<button id="landingPageStartButton" class="button">Start now</button>
 
+						<button id="landingPageDemoButton" class="button">View demo</button>
+					</div>
 
+					<!-- <i class="fa fa-chevron-down fa-2x down" onclick="location.href='#problem'" tabindex="0"></i> -->
+				</div>
+			</div>
+		</section>
 
 
+		<section id="problem">
 
 
+			<h2>The problem</h2>
 
+			<div id="problemPageTextImageContainer">
+				
 
+				<div id="problemPageTextContainer">
 
+					
 
+					<p id="problemPageNumber">85%</p>
 
+					<p>of people use something everyday. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
+					<p>They think that elementum tempus egestas sed sed risus pretium quam vulputate dignissim. Dictum sit amet justo donec enim.</p>
 
+					<button id="problemPageButton" class="button">Learn more</button>
 
+				</div>
 
+				<div id="problemPageImageContainer">
+					<img src="Images/problemImage.jpg" class="image" id="problemPageImage">
+				</div>
+			</div>
 
+			<!-- <i class="fa fa-chevron-down fa-2x down" onclick="location.href='#introducing'" tabindex="0"></i> -->
+		</section>
 
 
+		<section id="introducing">
+			<div id="introducingTitle">
+				<h2>Introducing...</h2>
+				
+				<i class="fa fa-chevron-down fa-2x down" onclick="location.href='#productAnchor'" tabindex="0"></i>
+			</div>
+		</section>
 
+		<section id="productAnchor"></section>
+		<section id="product">
 
+			<img src="Images/productImage.jpg" class="image" id="productPageImage">
 
+			<div id="productPageTextContainer">
+				<h2>Product Name</h2>
 
+				<p><span id="productPageSlogan">Slogan here</span>. Lorum ipsum dolor.</p>
+			</div>
+			<!-- <i class="fa fa-chevron-down fa-2x down" onclick="location.href='#features'" tabindex="0"></i> -->
+		</section>
 
+		<section id="transitionProductFeatures"></section>
 
+		<section id="features">
+			<div id="featuresLeft">
+				<div id="featuresLeftTextContainer">
+					<h2>Функции</h2>
 
+					<p>Что мы предлагаем</p>
 
+					<!-- <i class="fa fa-chevron-down fa-2x down" onclick="location.href='#about'" tabindex="0"></i> -->
+				</div>
+			</div>
 
+			<div id="featuresRight">
+				<div id="featuresRightCard">
+					<div id="featuresRightTextContainer">
+						<div id="featuresRightFeature">
+							<div class="featuresIconTitleContainer">
+								<ion-icon name="accessibility" class="featuresIcon"></ion-icon>
 
+								<h3 class="featuresTitle">Доступность</h3>
+							</div>
 
+							<p class="featureText">Наш продукт предназначен для всех, и мы гордимся тем, что он на 100 % доступен любому пользователю. Благодаря простым инструментам наш продукт может быть интуитивно понятен.</p>
+						</div>
 
+						<div id="featuresRightFeature">
+							<div class="featuresIconTitleContainer">
+								<ion-icon name="pricetag" class="featuresIcon"></ion-icon>
 
+								<h3 class="featuresTitle">Price</h3>
+							</div>
 
+							<p class="featureText">Price matters, and we know that. That's why our product is cheap so everyone can access it. However, rest assured; the quality of our product always stays the same.</p>
+						</div>
 
+						<div id="featuresRightFeature">
+							<div class="featuresIconTitleContainer">
+								<ion-icon name="chatbubbles" class="featuresIcon"></ion-icon>
 
+								<h3 class="featuresTitle">Служба поддержки</h3>
+							</div>
 
+							<p class="featureText">Прислушиваться к отзывам клиентов очень важно, и наша служба поддержки клиентов предлагает круглосуточную поддержку и всегда будет рядом, чтобы помочь вам. Сообщайте нам о любых жалобах, мнениях, комментариях и многом другом.</p>
+						</div>
 
+						<button id="featuresPageButton" class="button">Learn more</button>
+					</div>
+				</div>
+			</div>
+		</section>
 
+		<section id="aboutTop"></section>
 
+		<section id="about">
+			<div id="aboutPageTextContainer">
+				<h2>About</h2>
 
+				<p>We're a group of thinkers and innovaters who build amazing products.</p>
 
+				<div id="aboutPageCardsContainer">
+					<div id="aboutPageCard">
+						<h3>John Doe</h3>
 
+						<img src="Images/profilePicture1.png" class="image profilePictureImage">
 
+						<p>CEO and founder</p>
 
+						<button class="button contactButton">Contact me</button>
+					</div>
 
+					<div id="aboutPageCard">
+						<h3>Jane Doe</h3>
 
+						<img src="Images/profilePicture2.png" class="image profilePictureImage">
+						
+						<p>Designer</p>
 
+						<button class="button contactButton">Contact me</button>
+					</div>
 
+					<div id="aboutPageCard">
+						<h3>Jenny Doe</h3>
 
+						<img src="Images/profilePicture3.png" class="image profilePictureImage">
 
+						<p>Engineer</p>
 
+						<button class="button contactButton">Contact me</button>
+					</div>
+				</div>
+			</div>
+		</section>
 
+		<section id="aboutBottom">		</section>
 
 
+		<section id="contact">
+				<h2>Get in touch</h2>
 
+				<form action="#" onsubmit="return false;" id="contactForm"> 
+					<div id="contactFormContent">
+						<div id="nameContainer">
+							<p class="contactFormText">Name</p>
 
+							<div id="nameInputContainer">
+								<input type="text" placeholder="First name" autocomplete="off" class="contactFormInput"> 
+								<input type="text" placeholder="Last name" autocomplete="off" class="contactFormInput">
+							</div>
+						</div>
+						
 
+						<div id="emailContainer">
+							<p class="contactFormText">Email</p>
+							<input type="text" placeholder="johnDoe@email.com" autocomplete="off" class="contactFormInput">
+						</div>
 
+						<div id="messageContainer">
+							
+							<div id="subjectContainer">
+								<p class="contactFormText">Subject</p>
+								<input type="text" placeholder="Subject" autocomplete="off" class="contactFormInput">
+							</div>
 
+							<div id="mainMessageContainer">
+								<p class="contactFormText">Message</p>
+								<textarea id="formTextArea" name="subject" placeholder="What would you like to say?"  autocomplete="off" class="contactFormInput"></textarea>
+							</div>
+						</div>
 
+						<button class="button" id="formButtonSubmit">Submit</button>
+					</div>
+      	</form>
+		</section>
 
+		<section id="aboutTop"></section>
 
+		<section id="footer">
+			<div id="footerContainer">
+				<div class="footerColumn">
+					<h3><a href="" id="footerProductName">Xioka</a></h3>
 
+					<p class="footerText footerSlogan">Творим для будущего<br>Простые решения для сложных проблем</p>
+				</div>
 
+				<div class="footerColumn">
+					<h3 class="footerSectionTitle">Explore</h3>
 
+					<p><a href="#landingPage" class="footerLink">Home</a></p>
+          <p><a href="https://main.xioka.repl.co/random-color" class="footerLink">Рандомный цвет</a></p>
+					<p><a href="#problem" class="footerLink">The problem</a></p>
+					<p><a href="#productAnchor" class="footerLink">Product</a></p>
+					<p><a href="#features" class="footerLink">Features</a></p>
+					<p><a href="#about" class="footerLink">About</a></p>
+					<p><a href="#contact" class="footerLink">Contact</a></p>
+				</div>
 
+				<div class="footerColumn">
+					<h3 class="footerSectionTitle">Visit</h3>
 
+					<p class="footerText">Product Name Studios, California</p>
+					<p class="footerText">34 Main Street, Ste 100</p>
+					<p class="footerText">San Diego, Ca, 92168</p>
 
+					<h3 id="footerContactTitle" class="footerSectionTitle">Contact</h3>
 
+					<p><a href="" class="footerLink">Contact form</a></p>
 
+					<p><a href="mailto:productName@email.com" class="footerLink">productName@email.com</a></p>
+					<p class="footerText">949.333.3106</p>
+				</div>
 
+				<div class="footerColumn">
+					<h3 class="footerSectionTitle">Follow</h3>
 
+					<p><a href="" class="footerLink">Instagram</a></p>
+					<p><a href="" class="footerLink">Twitter</a></p>
+					<p><a href="" class="footerLink">Facebook</a></p>
+					<p><a href="" class="footerLink">LinkedIn</a></p>
+				</div>
 
+				<div class="footerColumn">
+					<h3 class="footerSectionTitle">Legal</h3>
 
+					<p><a href="" class="footerLink">Terms</a></p>
+					<p><a href="" class="footerLink">Privacy</a></p>
+				</div>
+			</div>
+		</section>
 
+		<script>
 
+			var header = document.getElementById("navBarItemContainer");
+			var btns = header.getElementsByClassName("navBarItemLink");
+			for (var i = 0; i < btns.length; i++) {
+				btns[i].addEventListener("click", function() {
+				var current = document.getElementsByClassName("navBarActive");
+				current[0].className = current[0].className.replace(" navBarActive", "");
+				this.className += " navBarActive";
+				});
+			}
+		</script>
 
+	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--────Don't change this-- Please give me credits─────-->
-	</main>
-	  <footer class="copyright">© 2022 
-		  <a href="https://main.xioka.repl.co/" target="_blank"> Xioka</a>
-     </footer>
-	  
-  </div>
   </body>
 </html>
