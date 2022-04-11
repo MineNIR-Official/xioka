@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Simulator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="yout.png" />
+</head>
+<body>
+    <center>
+        <div class="playSpace">
+            <div class='yourStats' id='stats'>
+                <div id="videoBox" class="videoBox">
+                    <div><h2 id='ch'>Название вашего канала: </h2><input type='text' id='channel' class='inforVid2'></input></div>
+                    <p>Деньги: <span id='money'></span></p>
+                    <p>Подписчики: <span id='subs'></span></p>
+                    <p>Просмотры: <span id='views'></span></p>
+                    <p>Лайки: <span id='likes'></span></p>
+                    <p>Дизлайки: <span id='dislikes'></span></p>
+                    <button class="myVids" id="myVideos">Все ваши видео</button>
+                    <button class="newVid" id="newVid">Новое видео</button>
+                    <button class='newVid' id='restart'>Начать сначала</button>
+                    <br>
+                    <button class='newVid' id='save'>Сохранить прогресс</button>
+                </div>
+            </div>
+            <div class="videos" id="videos">
+                <h2>Все ваши видео</h2>
+                <div class="vids" id="vids">
+
+                </div>
+                <button class="leave" id="leaveVid">
+                    Обратно
+                </button>
+            </div>
+            <div id="videoStats" class="videoStats">
+                <h2>Ваше видео опубликовано</h2>
+                <div id='videoBox' class='videoBox'>
+                    <p>Название: <span id='videoName'></span></p>
+                    <p>Описание: <span id='videoDesc'></span></p>
+                    <p>Просмотры: <span id='videoViews'></span></p>
+                    <p>Продолжительность: <span id='videoDur'></span></p>
+                    <p>Лайки: <span id='videoLikes'></span></p>
+                    <p>Дизлайки: <span id='videoDislikes'></span></p>
+                    <button class="leave" id="leave">Обратно</button>
+                </div>
+            </div>
+            <div class="uploadPage" id="uploadPage">
+                <div class='vidStat'>
+                    <h2>Информация о видео</h2>
+                    <div><span>Название: </span><input type='text' autocomplete="off" placeholder="Безумный сид в майнкрафте!" class='inforVid' id='name'></input></div>
+                    <p></p>
+                    <div><span>Описание: </span><textarea class='inforVid' placeholder="Подпишись)" id='description'></textarea></div>
+                    <p></p>
+                    <div><span>Продолжительность: </span><input type='number' class='inforVid' placeholder="В секундах" id='duration'></input></div>
+                    <p></p>
+                    <div><span>Бюджет: </span><input type='number' placeholder="Бюджет на ролик" class='inforVid' id='budget'></input></div>
+                </div>
+                <p></p>
+                <button id="upload" class="upload">Загрузить</button><input type="submit" value='' class="invis">
+            </div>
+            <div class="uploading" id="uploading">
+                <div id="bar">
+                    <div id="progress"></div>
+                </div>
+                <p>Загрузка...</p>
+            </div>
+        </div>
+    </center>
+   <style>
+   @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+#ch{
+  margin: 0px;
+  padding:0px;
+}
+
+
+.inforVid2{
+    border: none;
+    background: white;
+    border-bottom: 1px solid black;
+    margin: 0px;
+    padding: 0px;
+}
+
+*{
+    font-family: 'Varela Round', sans-serif;
+}
+
+h2{
+    font-family: 'Rubik', sans-serif;
+}
+h3{
+    font-family: 'Rubik', sans-serif;
+}
+
+body{
+    background: red;
+}
+
+.hold{
+    border: 1px solid rgb(238, 136, 136);
+    width: 300px;
+    background: rgb(206, 17, 17);
+    color: white;
+    text-align: left;
+    margin: 10px;
+}
+
+.videoBox{
+    text-align: left;
+    width: 300px;
+}
+
+h1{
+    text-shadow: 0px 0px 1px black;
+}
+
+
+#videoStats{
+    display: none;
+}
+
+#videos{
+    display: none;
+}
+
+.playSpace{
+    padding-top: 25vh;
+    border: 1px solid black;
+    background: rgb(255, 255, 255);
+    width: 80vw;
+    height: 70vh;
+    overflow: scroll;
+}
+
+.playSpace::-webkit-scrollbar{
+    display: none;
+}
+
+button{
+    border: 2px solid gray;
+    background: white;
+    transition: all 0.5s ease;
+    margin: 3px;
+}
+
+button:hover{
+    border: 2px solid black;
+    background: rgb(235, 235, 235);
+    cursor: pointer;
+}
+
+textarea{
+    height: 10px;
+}
+
+#uploadPage{
+    display: none;
+}
+
+.inforVid{
+    border: none;
+    background: white;
+    border-bottom: 1px solid black;
+}
+
+#uploading{
+    display: none;
+}
+
+#progress{
+    background: rgb(43, 221, 43);
+    height: 10px;
+    width: 0px;
+}
+#bar{
+    background: white;
+    border: 1px solid black;
+    text-align: left;
+    height: 10px;
+    width: 100px;
+}
+
+.invis{
+    border: none;
+    background: white;
+}
+   </style>
+    <script>
+let yourStats;
+
+if (localStorage.getItem('yourStats')!= null){
+      yourStats = JSON.parse(localStorage.getItem('yourStats'))
+}else{
+  yourStats = {
+        "name":'',
+        "subscribers":0,
+        "likes":0,
+        "views":0,
+        "dislikes":0,
+        "videos":[],
+        "averageViews":0,
+        "averageSubs":0,
+        "averageLikes":0,
+        "money":2500,
+        "ads":false,
+        "sponsors":[],
+        "maxTime":300
+    }
+}
+
+console.log(yourStats)
+
+
+let comments = {
+  "hateComments":[],
+  "praiseComments":['Ха, мне нравятся твои видосы, они смешные!','Это видео эпично','Я мог бы смотреть это всю ночь','это лучше, чем любое видео, которое я когда-либо видел','обожаю твои видио!!','это чертовски круто','Я думаю, ты когда-нибудь достигнешь вершины!'],
+  "otherComments":[]
+}
+
+  
+window.onload=function(){
+    leaveUpload();
+    update();
+
+    function update(){
+       document.getElementById('channel').value=yourStats['name']
+        document.getElementById('views').innerText=yourStats['views'];
+        document.getElementById('subs').innerText=yourStats['subscribers'];
+        document.getElementById('likes').innerText=yourStats['likes'];
+        document.getElementById('dislikes').innerText=yourStats['dislikes'];
+        document.getElementById('money').innerText=yourStats['money'];
+    }
+
+    document.getElementById('save').addEventListener('click',function(){
+      save();
+    })
+
+    function newVideo(){
+        document.getElementById('newVid').style.display='none';
+        document.getElementById('myVideos').style.display='none';
+        document.getElementById('uploadPage').style.display='block';
+        document.getElementById('stats').style.display='none';
+    }
+
+    document.getElementById('restart').addEventListener('click',function(){
+      restart();
+    })
+
+    function leaveUpload(){
+        document.getElementById('newVid').style.display='block';
+        document.getElementById('videos').style.display='none';
+        document.getElementById('myVideos').style.display='block';
+        document.getElementById('uploadPage').style.display='none';
+        document.getElementById('stats').style.display='block';
+    }
+
+    document.getElementById('channel').addEventListener('change',function(){
+      yourStats['name']=this.value;
+    })
+
+    function upload(){
+        document.getElementById('uploadPage').style.display='none';
+        document.getElementById('uploading').style.display='block';
+        isUploading();
+    }
+
+    function leave(){
+        leaveUpload();
+        document.getElementById('videoStats').style.display='none';
+    }
+
+    function videoDone(){
+        document.getElementById('videoStats').style.display='block';
+    }
+
+    function save(){
+      localStorage.setItem('yourStats', JSON.stringify(yourStats))
+    }
+
+    function restart(){
+      yourStats={
+        "subscribers":0,
+        "likes":0,
+        "views":0,
+        "dislikes":0,
+        "videos":[],
+        "averageViews":0,
+        "averageSubs":0,
+        "averageLikes":0,
+        "money":2500,
+        "ads":false,
+        "sponsors":[],
+        "maxTime":300
+      }
+      update();
+    }
+
+    function isUploading(){
+        let completion = 0;
+        var cleanIfy = setInterval(() => {
+            completion+=(Math.random()*1)/(Number(document.getElementById('duration').value)/50);
+            if (completion >= 100){
+                completion = 100;
+                document.getElementById('progress').style.width=completion+'px';
+                clearInterval(cleanIfy);
+                let videoStats = 
+                {"name":document.getElementById('name').value,
+                "duration":Number(document.getElementById('duration').value),
+                "budget":Number(document.getElementById('budget').value)}
+                if (yourStats['money'] < videoStats['budget']){
+                    videoStats['budget'] = yourStats['money'];
+                }
+                let thisVideo = {
+                    "name": videoStats['name'],
+                    "duration":videoStats['duration']+'s',
+                    "budget":'$'+videoStats['budget'],
+                    "views":Math.floor((Math.floor(Math.random()*videoStats['duration']*0.5)/2)+(Math.floor(Math.random()*(videoStats['budget']+1))))+(Math.floor(Math.random()*yourStats['averageViews']+2)),
+                }
+                if (Math.floor(Math.random()*100)==1){
+                    thisVideo['views']+=Math.floor(Math.random()*20000);
+                }
+                let likes = Math.floor(thisVideo['views']/(Math.floor(Math.random()*3)+1)*0.7)
+                let dislikes = Math.floor(((thisVideo['views']-likes)*0.1));
+                yourStats['averageViews']=Math.floor((yourStats['subscribers']*0.4))
+                yourStats['averageSubs']=Math.floor((thisVideo['views']*0.1)*0.5)-Math.floor((dislikes)/2);
+                if (yourStats['averageSubs'] < 0){
+                    yourStats['averageSubs']=0;
+                }
+                if (yourStats['subscribers'] >= 1000){
+                    yourStats['money']+=Math.floor((thisVideo['views']/1000)*3);
+                }
+                yourStats['likes']+=likes;
+                if (likes >= thisVideo['views']){
+                    likes = thisVideo['views']-Math.floor(Math.random()*thisVideo['views']);
+                }
+                if (likes < 0){
+                    likes=0;
+                }
+                if (dislikes < 0){
+                    dislikes=0;
+                }
+                let videoComplete = {
+                    "name":thisVideo['name'],
+                    "description":document.getElementById('description').value,
+                    "duration":thisVideo['duration'],
+                    "budget":thisVideo['budget'],
+                    "views":thisVideo['views'],
+                    "likes":likes,
+                    "dislikes":dislikes
+                }
+                if (yourStats['subscribers'] > 100){
+                    yourStats['maxTime']+=((yourStats['subscribers']/5)-(yourStats['dislikes']/30))
+                }
+                if (likes > 30){
+                    yourStats['maxTime']+=1;
+                }
+                yourStats['dislikes']+=dislikes;
+                yourStats['videos'].push(videoComplete);
+                console.log(yourStats['videos']);
+                yourStats['money']-=videoStats['budget'];
+                yourStats['views']+=thisVideo['views'];
+                document.getElementById('videoName').innerText=videoComplete['name'];
+                document.getElementById('videoDesc').innerText=videoComplete['description'];
+                document.getElementById('videoViews').innerText=videoComplete['views'];
+                document.getElementById('videoDur').innerText=videoComplete['duration'];
+                document.getElementById('videoLikes').innerText=videoComplete['likes'];
+                document.getElementById('videoDislikes').innerText=videoComplete['dislikes'];
+                yourStats['subscribers']+=Math.floor((Math.floor(Math.random()*(thisVideo['views']*0.1))+Math.floor(Math.random()*yourStats['averageSubs']+1)*0.4)*0.8)
+                yourStats['subscribers']-=(Math.floor(dislikes/4))
+                if (yourStats['subscribers'] < 0){
+                    yourStats['subscribers'] = 0;
+                }
+                document.getElementById('uploading').style.display='none';
+                document.getElementById('progress').style.width=0+'px';
+                
+                for(x in yourStats['videos']){
+                  let add = Math.floor(Math.random()*(yourStats['averageViews']))
+                  yourStats['videos'][x]['views']+=add;
+                  yourStats['views']+=add;
+                }
+                videoDone();
+                update();
+            }
+            document.getElementById('progress').style.width=completion+'px';
+        },1e1)
+    }
+    
+    document.getElementById('newVid').addEventListener('click', function(){
+        newVideo()}
+    );
+    document.getElementById('upload').addEventListener('click', function(){
+        upload()}
+    );
+    document.getElementById('budget').addEventListener('change', function(){
+        if (Number(this.value) > yourStats['money']){
+            this.value=yourStats['money'];
+        }
+    })
+    document.getElementById('duration').addEventListener('change', function(){
+        if (Number(this.value) > yourStats['maxTime']){
+            this.style.width = '300px';
+            this.placeholder='Channel must grow for longer vids';
+            this.value='';
+        }else{
+          this.style.width = '100px';
+          this.style.color='gray';
+        }
+    })
+
+    document.getElementById('leave').addEventListener('click',function(){
+        leave();
+    })
+
+    document.getElementById('leaveVid').addEventListener('click',function(){
+        leave();
+    })
+
+    document.getElementById('myVideos').addEventListener('click',function(){
+        newVideo();
+        document.getElementById('uploadPage').style.display='none';
+        document.getElementById('videos').style.display='block';
+        document.getElementById('vids').innerHTML='';
+        for (x in yourStats['videos']){
+            document.getElementById('vids').innerHTML+=`<div class='hold'><h3>Название: ${yourStats['videos'][x]['name']}</h3><p>Описание: ${yourStats['videos'][x]['description']}</p><p>Просмотры: ${yourStats['videos'][x]['views']}</p><p>Лайки: ${yourStats['videos'][x]['likes']}</p><p>Дизлайки: ${yourStats['videos'][x]['dislikes']}</p><p>Продолжительность: ${yourStats['videos'][x]['duration']}</p><p>Бюджет: ${yourStats['videos'][x]['budget']}</p></div>`
+        }
+    })
+}
+    </script>
+</body>
+</html>
