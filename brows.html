@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="index.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <script src="index.js"></script>
+    
+    <div id = "allcontent">
+    <div class="center">
+    <div class="logo">
+      <img src=https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png alt="Google" />
+    </div>
+    <div class="form">
+      <div id="searchbox">
+        <form  action="process.php" method="GET" name="search">
+          <input id="box" type="text" name="search" />
+        </form>
+      </div>
+      <div id="buttons">
+        <form action="process.php" method="GET" name="searchbutotns">
+          <button id="googlesearch" type="button" name="google_search"> Google Search
+          </button>
+          <button id="feelinglucky" type="button" name="feelig_lucky"> I'm Feeling Lucky
+          </button>
+        </form>
+
+      </div>
+    </div>
+    <div class="hplink"> 
+      <a href="https://www.google.com/homepage/hp-ie10.html"><img id="home" src="https://www.google.com/images/mgyhp_sm.png"/></a>
+      <a id="homepage" href="https://www.google.com/homepage/hp-ie10.html"> Make Google my homepage </a>
+    </div>
+    </div>
+    <div class="bottombar"> 
+      <div id="botleftrow">
+        <table id="botlefttable">
+          <tr>
+            <td><a href="https://www.google.com/intl/en/ads/?fg=1">Advertising</a>
+            </td>
+            <td><a href="https://www.google.com/services/?fg=1">Business</a>
+            </td>
+            <td><a href="https://www.google.com/intl/en/about.html?fg=1">About</a>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div id="botrightrow">
+        <table id="botrighttable">
+          <tr>
+            <td><a href="https://www.google.com/intl/en/policies/privacy/?fg=1">Privacy</a>
+            </td>
+            <td><a href="https://www.google.com/intl/en/policies/terms/?fg=1">Terms</a>
+            </td>
+            <td><a href="https://www.google.com/preferences?hl=en">Settings</a>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="toprightbar">
+      <table id="toprighttable">
+        <tr>
+          <td>Gayatri</td>
+          <td>Gmail</td>
+          <td>Images</td>
+          <td><img  src="https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_apps_48px-128.png" alt="icon img"></td>
+          <td ><img  src="https://cdn3.iconfinder.com/data/icons/glypho-phones-and-communication/64/bell-circle-512.png"> </td>
+          <td> <div> <p>G</p> </div> </td>
+    </div>
+</div>
+    <style>
+      img {
+  height: 92px;
+  width: 272px;
+}
+
+.logo {
+  height: 94px;
+  width: 450px;
+  margin: 150px auto;
+  text-align: center;
+  
+}
+
+.form {
+  height:130px;
+  width:450px;
+  margin: -140px auto;
+  
+}
+
+#searchbox {
+  margin: 20px 0px 0px 0px;
+  height: 30px;
+}
+
+#box {
+  height: 30px;
+  width: 445px;
+}
+
+#buttons {
+  margin: 40px;
+  text-align: center;
+}
+
+#googlesearch, #feelinglucky {
+  height: 35px;
+  text-align: center;
+  color: #666666;
+  font-weight: bold;
+  font-size: 12.5px;
+  border: none;
+  background-color: #e6e6e6;
+  padding-left: 17px;
+  padding-right: 17px;
+}
+
+#googlesearch {
+  margin-right:2px;
+}
+
+#feelinglucky {
+  margin-left:2px;
+}
+
+#home {
+  height: 13px;
+  width: 13px;
+  border: none;
+  margin-right: 3px;
+}
+
+#homepage {
+  text-decoration: none;
+  font-size:12px;
+  font-family:Arial;
+  top:-4px;
+}
+
+.hplink {
+  width:445px;
+  height:20px;
+  text-align: center;
+  margin: 140px auto;
+
+}
+#allcontent {
+  margin: auto;
+  padding: 0;
+  position: relative;
+}
+.bottombar {
+  width:100%;
+  height:35px;
+  margin: 122px auto;
+  position: fixed;
+  bottom:-50px;
+  background-color: #e6e6e6;
+}
+
+
+#botrightrow {
+  right: 0;
+  bottom: 0;
+  position: absolute;
+
+}
+#botleftrow {  
+  background-color: #e6e6e6;
+  width: 230px;
+  left: -13px;
+  bottom:0;
+  position: absolute;
+
+}
+
+#botlefttable {
+  height: 35px;
+  margin-left:10px;
+}
+#botrighttable {
+  height: 35px;
+  margin-right:10px;
+ 
+}
+
+.bottombar a {
+  text-decoration: none;
+  font-family: Arial;
+  font-size:13px;
+  color: #666666;
+}
+.bottombar a:hover{
+  text-decoration: underline;
+}
+
+.bottombar td {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#toprighttable img {
+  width: 25px;
+  height: 25px;
+}
+
+#toprighttable td div {
+  background-color: #8B008B;
+  height: 30px;
+  width: 30px;
+  border-radius: 30px;
+  text-align: center;
+  border: 1px solid purple;
+  
+}
+
+#toprighttable td div p {
+  margin-top: 7px;
+  color: white;
+  font-family: arial
+}
+
+#toprighttable td {
+  padding-left: 7px;
+  padding-right: 7px;
+  font-family: Arial;
+  font-size: 13px
+}
+
+.toprightbar {
+  position: absolute;
+  top:-140px;
+  right: 0;
+}
+    </style>
+  </body>
+</html>
