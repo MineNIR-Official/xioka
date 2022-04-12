@@ -1,1 +1,3 @@
 ErrorDocument 404 https://www.xioka.ga/404
+ErrorDocument 403 https://www.xioka.ga/403
+ErrorDocument 500 https://www.xioka.ga/500
