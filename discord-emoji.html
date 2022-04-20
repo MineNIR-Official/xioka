@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+      <center>
+          <h1>Текст в Эмоджи для Discord</h1>
+          
+      
+            <script src="script.js"></script>
+            <textarea type="text" placeholder="Ввод" id="myInput"></textarea>
+            <br>
+            <textarea placeholder="Вывод" id="why"></textarea>
+            <br>
+            <button onclick="myFunction()">Копировать</button>
+        
+        <script>
+        
+function myFunction() {
+    var alphebet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+    var bruh = []
+  /* Get the text field */
+  var copyText = document.getElementById("myInput");
+  var legit = document.getElementById("why");
+  var txt = copyText.value.toLowerCase()
+  //var str = "Hello World!";
+  var txt = txt.split("")
+  console.log(txt)
+  for (i in txt) {
+      var l = txt[i]
+      //console.log(l)
+      if (alphebet.includes(l) === true) {
+          var l = `:regional_indicator_${l}:`
+          //console.log(l)
+      }
+      bruh.push(l)
+  }
+  legit.value = bruh.join(' ')
+  /* Select the text field */
+  //legit.select(); 
+  legit.setSelectionRange(0, 99999); /* For mobile devices */
+
+  /* Copy the text inside the text field */
+  document.execCommand("copy");
+
+  /* Alert the copied text */
+  //alert("Copied the text: " + copyText.value);
+}
+        </script>
+  </body>
+</html>
